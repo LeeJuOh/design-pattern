@@ -1,9 +1,13 @@
 package factory.before;
 
-public class Pizza {
+public interface Pizza {
 
-    Pizza orderPizza() {
-        return new Pizza();
-    }
+    void box();
+
+    void cut();
+
+    void bake();
+
+    void prepare();
 
 }
