@@ -1,7 +1,8 @@
-package factory.after;
+package factory.simple;
 
-import factory.before.Pizza;
+import factory.before.pizza.Pizza;
 
+// 간단한 팩토리를 이용한 방법
 public class PizzaStore {
 
     SimplePizzaFactory simplePizzaFactory;

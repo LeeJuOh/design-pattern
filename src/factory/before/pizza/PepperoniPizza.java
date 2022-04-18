@@ -1,4 +1,4 @@
-package factory.before;
+package factory.before.pizza;
 
 public class PepperoniPizza extends Pizza {
 

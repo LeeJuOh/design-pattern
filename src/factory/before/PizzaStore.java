@@ -1,5 +1,10 @@
 package factory.before;
 
+import factory.before.pizza.CheesePizza;
+import factory.before.pizza.GreekPizza;
+import factory.before.pizza.PepperoniPizza;
+import factory.before.pizza.Pizza;
+
 public class PizzaStore {
 
     Pizza orderPizza(String type) {
