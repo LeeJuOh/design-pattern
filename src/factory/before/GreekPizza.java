@@ -1,24 +1,6 @@
 package factory.before;
 
-public class GreekPizza implements Pizza {
+public class GreekPizza extends Pizza {
 
-    @Override
-    public void box() {
 
-    }
-
-    @Override
-    public void cut() {
-
-    }
-
-    @Override
-    public void bake() {
-
-    }
-
-    @Override
-    public void prepare() {
-
-    }
 }

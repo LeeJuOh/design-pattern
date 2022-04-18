@@ -1,13 +1,21 @@
 package factory.before;
 
-public interface Pizza {
+public abstract class Pizza {
 
-    void box();
+    public void box() {
+        System.out.println("포장");
+    }
 
-    void cut();
+    public void cut() {
+        System.out.println("커팅");
+    }
 
-    void bake();
+    public void bake() {
+        System.out.println("굽기");
+    }
 
-    void prepare();
+    public void prepare() {
+        System.out.println("준비");
+    }
 
 }
