@@ -1,13 +1,13 @@
-package factory.after;
+package factory.after2;
 
-import factory.after.pizza.ChicagoStyleCheesePizza;
-import factory.after.pizza.ChicagoStyleGreekPizza;
-import factory.after.pizza.Pizza;
+import factory.after2.pizza.ChicagoStyleCheesePizza;
+import factory.after2.pizza.ChicagoStyleGreekPizza;
+import factory.after2.pizza.Pizza;
 
 public class ChicagoPizzaStore extends PizzaStore {
 
     @Override
-    Pizza createPizza(String type) {
+    protected Pizza createPizza(String type) {
         Pizza pizza = null;
 
         if (type.equals("cheese")) {

@@ -1,14 +1,18 @@
 package factory.after;
 
-import factory.after.pizza.Pizza;
+import factory.before.pizza.Pizza;
 
+// 간단한 팩토리를 이용한 방법
+public class PizzaStore {
 
-// 팩토리 메소드 패턴
-public abstract class PizzaStore {
+    SimplePizzaFactory simplePizzaFactory;
+
+    public PizzaStore(SimplePizzaFactory simplePizzaFactory) {
+        this.simplePizzaFactory = simplePizzaFactory;
+    }
 
     Pizza orderPizza(String type) {
-
-        Pizza pizza = createPizza(type); // 팩토리 객체가 아닌 메소드 호출
+        Pizza pizza = simplePizzaFactory.createPizza(type);
 
         // 바뀌지 않는 부분
         pizza.prepare();
@@ -18,10 +22,5 @@ public abstract class PizzaStore {
 
         return pizza;
     }
-
-    // 팩토리 객체 대신 해당 "메소드" 사용
-    // "팩토리 메소드"가 추상 메소드로 바뀌었다.
-    // 이제 Pizza 인스턴스를 만드는 일은 팩토리 역할을 하는 메소드에서 맡아서 처리한다.
-    abstract Pizza createPizza(String type);
 
 }

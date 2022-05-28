@@ -1,4 +1,4 @@
-package factory.after.pizza;
+package factory.after2.pizza;
 
 public class ChicagoStyleGreekPizza extends Pizza {
 

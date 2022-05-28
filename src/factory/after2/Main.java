@@ -1,6 +1,6 @@
-package factory.after;
+package factory.after2;
 
-import factory.after.pizza.Pizza;
+import factory.after2.pizza.Pizza;
 
 public class Main {
 
