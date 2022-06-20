@@ -1,6 +1,6 @@
-package factory.after2;
+package factory.factorypattern;
 
-import factory.after2.pizza.Pizza;
+import factory.factorypattern.pizza.Pizza;
 
 
 // 팩토리 메소드 패턴

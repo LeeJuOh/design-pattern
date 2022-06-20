@@ -1,8 +1,8 @@
-package factory.after2;
+package factory.factorypattern;
 
-import factory.after2.pizza.ChicagoStyleCheesePizza;
-import factory.after2.pizza.ChicagoStyleGreekPizza;
-import factory.after2.pizza.Pizza;
+import factory.factorypattern.pizza.ChicagoStyleCheesePizza;
+import factory.factorypattern.pizza.ChicagoStyleGreekPizza;
+import factory.factorypattern.pizza.Pizza;
 
 public class ChicagoPizzaStore extends PizzaStore {
 

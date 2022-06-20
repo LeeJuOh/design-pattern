@@ -1,4 +1,4 @@
-package factory.after;
+package factory.simplefactory;
 
 import factory.before.pizza.CheesePizza;
 import factory.before.pizza.GreekPizza;

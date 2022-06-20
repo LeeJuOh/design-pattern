@@ -1,4 +1,4 @@
-package factory.after2.pizza;
+package factory.factorypattern.pizza;
 
 import java.util.ArrayList;
 import java.util.List;
