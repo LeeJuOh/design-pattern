@@ -1,25 +1,36 @@
 package command.client;
 
-import command.cmd.CeilingFanHighCommand;
-import command.cmd.CeilingFanOffCommand;
+import command.cmd.Command;
 import command.cmd.LightOffCommand;
 import command.cmd.LightOnCommand;
-import command.vendor.CeilingFan;
+import command.cmd.MacroCommand;
+import command.cmd.StereoOffCommand;
+import command.cmd.StereoOnCommand;
 import command.vendor.Light;
+import command.vendor.Stereo;
+import javax.crypto.Mac;
 
 public class RemoteLoader {
 
     public static void main(String[] args) {
         RemoteControl remoteControl = new RemoteControl();
-        CeilingFan ceilingFan = new CeilingFan("Living Room");
-        CeilingFanHighCommand ceilingFanHighCommand = new CeilingFanHighCommand(ceilingFan);
-        CeilingFanOffCommand ceilingFanOffCommand = new CeilingFanOffCommand(ceilingFan);
+        Light light = new Light("Living Room");
+        Stereo stereo = new Stereo("Living Room");
 
-        remoteControl.setCommand(0, ceilingFanHighCommand, ceilingFanOffCommand);
+        LightOnCommand lightOnCommand = new LightOnCommand(light);
+        LightOffCommand lightOffCommand = new LightOffCommand(light);
+        StereoOnCommand stereoOnCommand = new StereoOnCommand(stereo);
+        StereoOffCommand stereoOffCommand = new StereoOffCommand(stereo);
+        Command[] partyOn = {lightOnCommand, stereoOnCommand};
+        Command[] partyOff = {lightOffCommand, stereoOffCommand};
+        MacroCommand partyOnMacro = new MacroCommand(partyOn);
+        MacroCommand partyOffMacro = new MacroCommand(partyOff);
 
-        remoteControl.onButtonWasPushed(0);
-        remoteControl.offButtonWasPushed(0);
+        remoteControl.setCommand(0, partyOnMacro, partyOffMacro);
         System.out.println(remoteControl);
-        remoteControl.undoButtonWasPushed();
+        System.out.println("---- macro on ------");
+        remoteControl.onButtonWasPushed(0);
+        System.out.println("---- macro off ------");
+        remoteControl.offButtonWasPushed(0);
     }
 }

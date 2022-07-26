@@ -2,10 +2,10 @@ package command.cmd;
 
 import command.vendor.Stereo;
 
-public class StereoOnWithCDCommand implements Command {
+public class StereoOnCommand implements Command {
 	Stereo stereo;
  
-	public StereoOnWithCDCommand(Stereo stereo) {
+	public StereoOnCommand(Stereo stereo) {
 		this.stereo = stereo;
 	}
  
