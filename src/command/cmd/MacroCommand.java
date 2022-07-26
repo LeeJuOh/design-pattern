@@ -13,6 +13,7 @@ public class MacroCommand implements Command {
         for (Command command : commands) {
             command.execute();
         }
+
     }
 
     @Override
