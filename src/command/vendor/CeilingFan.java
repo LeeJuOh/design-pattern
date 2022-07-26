@@ -2,42 +2,44 @@ package command.vendor;
 
 public class CeilingFan {
 
-    String location = "";
-    int level;
-    public static final int HIGH = 2;
-    public static final int MEDIUM = 1;
-    public static final int LOW = 0;
+    String location;
+    int speed; // 속도를 나타내는 상태 저장
+    public static final int HIGH = 3;
+    public static final int MEDIUM = 2;
+    public static final int LOW = 1;
+    public static final int OFF = 0;
 
     public CeilingFan(String location) {
         this.location = location;
+        speed = OFF;
     }
 
     public void high() {
         // turns the ceiling fan on to high
-        level = HIGH;
+        speed = HIGH;
         System.out.println(location + " ceiling fan is on high");
 
     }
 
     public void medium() {
         // turns the ceiling fan on to medium
-        level = MEDIUM;
+        speed = MEDIUM;
         System.out.println(location + " ceiling fan is on medium");
     }
 
     public void low() {
         // turns the ceiling fan on to low
-        level = LOW;
+        speed = LOW;
         System.out.println(location + " ceiling fan is on low");
     }
 
     public void off() {
         // turns the ceiling fan off
-        level = 0;
+        speed = OFF;
         System.out.println(location + " ceiling fan is off");
     }
 
     public int getSpeed() {
-        return level;
+        return speed;
     }
 }
